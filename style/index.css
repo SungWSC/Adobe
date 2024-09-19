@@ -46,6 +46,7 @@ body {
     text-decoration: none;
     text-transform: capitalize;
     line-height: 100px;
+    transition-duration: .3s;
 }
 
 .nav-btn:hover {
