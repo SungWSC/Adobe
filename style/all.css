@@ -8,7 +8,7 @@ img {
     vertical-align: bottom;
 }
 
-/* a {
+a {
     text-decoration: none;
-    outline: none;
-}  */
+    /* outline: none; */
+} 

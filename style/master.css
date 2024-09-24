@@ -23,8 +23,13 @@
     transition-duration: .3s;
 }
 
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn-active {
     opacity: 1;
+}
+
+.nav-btn-index {
+    background-color: #000;
 }
 
 
@@ -50,4 +55,80 @@
     margin-bottom: 1rem;
     line-height: 1.7;
     text-align: justify;
+}
+
+
+/* grid ----------------------------------- */
+
+.grid {
+    display: grid;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2,1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+/* helper: gap ---------------------------- */
+
+.gap-small {
+    gap: 1rem;
+}
+.gap-medium {
+    gap: 1.5rem;
+}
+.gap-large {
+    gap: 2rem;
+}
+
+
+/* component: card ------------------------------------ */
+
+.card{
+    position: relative;
+    -webkit-box-reflect: below -1px linear-gradient(to top, rgba(0, 0, 0, .3) 0, transparent 50%) ;
+}
+
+.card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img{
+    max-width: 100%;
+    height: auto;
+}
+
+.card-body .fas {
+    color: #fff;
+}
+
+
+/* module: hover -------------------------------------- */
+
+.hover-fade-in .card-body{
+    opacity: 0;
+    transition-duration: .3s;
+}
+.hover-fade-in:hover .card-body{
+    opacity: 1;
+}
+
+.hover-zoom-in .fas{
+    scale: 0;
+    transition-duration: .3s;
+}
+.hover-zoom-in:hover .fas{
+    scale: 1;
 }
