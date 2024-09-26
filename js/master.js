@@ -17,6 +17,7 @@ const isMobile = $(window).width() <= 480;
 
 const $grid = $('#Grid')
 
+// ----------------------------------------------------
 
 function setGrid() {
     if (isMobile === true) {
@@ -30,11 +31,35 @@ function setGrid() {
 // == 判斷是否相同
 // === 判斷是否相同 (包含型別)
 
-function setInit(){
+
+function setScroll() {
+    if (isMobile) {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() === 0) {
+                $('#Nav').removeClass('nav-active')
+            } else {
+                $('#Nav').addClass('nav-active')
+            };
+        })
+    }
+}
+
+// ---------------------------------------------
+
+function setInit() {
     setGrid();
 }
+function setEvent() {
+    setScroll()
+}
+
+const $anchors = $('[data-fancybox]');
+$anchors.fancybox();
 
 
 // init --------------------------------------------------------------
-
 setInit();
+
+
+// event -------------------------------------------------------------
+setEvent()

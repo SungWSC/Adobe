@@ -10,6 +10,7 @@
     transform: translateY(-50%);    
     /* 老師的寫法
     margin-top: -116px; */
+    transition-duration: .5s;
 }
 
 .nav-btn {
@@ -131,4 +132,32 @@
 }
 .hover-zoom-in:hover .fas{
     scale: 1;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .article {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .article {
+        padding: 4rem 2rem 2rem;
+        width: auto;
+    }
+    .article-head {
+        text-align: center;
+    }
+    .nav {
+        top: 0;
+        right: auto;
+        transform: translateY(0);
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-active {
+        background-color: rgba(0, 0, 0, .6);
+    }
 }
